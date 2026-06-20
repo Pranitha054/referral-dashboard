@@ -17,11 +17,7 @@ function Dashboard() {
   const [sort, setSort] = useState('desc')
   const [currentPage, setCurrentPage] =
     useState(1)
-
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
-  loadReferrals()
-}, [search, sort])
   const loadReferrals = async () => {
     try {
       const response =
@@ -50,6 +46,9 @@ useEffect(() => {
       console.log(error)
     }
   }
+
+  loadReferrals()
+}, [search, sort])
 
   const copyLink = () => {
     navigator.clipboard.writeText(

@@ -11,11 +11,7 @@ function ReferralDetails() {
   const [referral, setReferral] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
-  loadReferral()
-}, [])
-
   const loadReferral = async () => {
     try {
       const response =
@@ -32,6 +28,9 @@ useEffect(() => {
       setIsLoading(false)
     }
   }
+
+  loadReferral()
+}, [id])
 
   if (isLoading) {
     return (

@@ -1,0 +1,79 @@
+.details-container {
+  min-height: 70vh;
+  background: #f5f6fb;
+  padding: 40px;
+}
+
+.details-card {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.details-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.details-top h1 {
+  margin: 0;
+}
+
+.back-btn {
+  text-decoration: none;
+  background: #6366f1;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+  gap: 24px;
+}
+
+.details-grid label {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.details-grid p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.service-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #6366f1;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.profit-value {
+  color: #16a34a;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-top {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

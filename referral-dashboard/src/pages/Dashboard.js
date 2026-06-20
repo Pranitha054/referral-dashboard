@@ -18,10 +18,10 @@ function Dashboard() {
   const [currentPage, setCurrentPage] =
     useState(1)
 
-  useEffect(() => {
-    loadReferrals()
-  }, [search, sort])
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  loadReferrals()
+}, [search, sort])
   const loadReferrals = async () => {
     try {
       const response =
